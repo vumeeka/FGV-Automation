@@ -1,0 +1,13 @@
+{
+    "validUser": {
+      "EmployeeDetails": "FGVADMIN001",
+      "passwordDetails": "ChangeM6"
+    },
+
+    "invalidUser":{
+
+        "EmployeeDetails": "FGVADMINq",
+        "passwordDetails": "ChangeM1"
+
+    }
+}
