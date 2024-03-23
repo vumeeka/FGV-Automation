@@ -14,7 +14,7 @@ exports.LoginPage = class LoginPage {
     }
 
     async gotoLoginPage() {
-        await this.page.goto("https://uatewalletfgv.digitalmta.com/");
+        await this.page.goto("https://uatewallet.fgvholdings.com/");
     }
 
 

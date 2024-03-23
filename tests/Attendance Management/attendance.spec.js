@@ -31,6 +31,8 @@ test.describe('Attendance for 1 day and 30 days excel message', () => {
         await attendance.verifyingRegionFilter()
         await attendance.verifyingEstateFilter()
         await attendance.verifyingSearchButton()
+        await page.waitForTimeout(5000)
+        await attendance.verifyingExport()
     })
 
     

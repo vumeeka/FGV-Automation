@@ -15,6 +15,8 @@ exports.attendancePage = class attendancePage {
         this.regionFilter="//label[@for='region']//following-sibling::div"
         this.estateFilter="//label[@for='estate']//following-sibling::div"
         this.dropdownElement="//div[@class=' css-1m0ufzk']//div"
+        this.greenExcel="(//img[@alt='excel_icon'])[1]"
+        this.exportSuccessfully="//div[contains(text(), 'Successfully Exported')]"
     }
 
     async verifyingAttendanceReportGeneration(){
@@ -137,4 +139,11 @@ exports.attendancePage = class attendancePage {
         }
     }
    
+    async verifyingExport(){
+        await this.page.locator(this.greenExcel).click()
+        //await this.page.locator(this.redExcel).click()
+        const check = await this.page.locator(this.exportSuccessfully).textContent();
+        expect(check).toContain('Successfully Exported');
+
+    }
 }
