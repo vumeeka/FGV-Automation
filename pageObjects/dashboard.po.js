@@ -9,7 +9,9 @@ exports.dashBoardPage = class dashBoardPage {
         this.pendingClockIn = "//p[normalize-space()='Pending Clock In']"
         this.absent = "//p[normalize-space()='Absent']"
         this.pendingClockOut = "//p[normalize-space()='Pending Clock Out']"
-        this.datepickerButton="//label[@for='date']//following-sibling::div//div//button[@type='button']"
+       
+        this.datepickerButton="(//input[@id='date']//following::span)[1]";
+        //label[@for='date']//following-sibling::div//div//button[@type='button']
         
     }
 
@@ -18,11 +20,13 @@ exports.dashBoardPage = class dashBoardPage {
         const MonthDateDay = "Mon, Mar 19";
 
         // Wait for the page load completion
-        await this.page.waitForLoadState('load');
+        //await this.page.waitForLoadState('load');
 
         // Click the date picker button after the page has loaded
-        await this.page.waitForSelector(this.datepickerButton);
+        //await this.page.waitForSelector(this.datepickerButton);
+       // await this.page.waitForTimeout(1000)
         await this.page.locator(this.datepickerButton).click();
+        //await this.page.locator(this.attendanceSearch).click();
 
         // // Click on the button to open the date picker
         // await datePickerButton.click();

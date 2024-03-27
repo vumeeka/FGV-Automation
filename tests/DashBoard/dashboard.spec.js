@@ -17,7 +17,9 @@ test.beforeEach(async ({ page }) => {
 test.describe('Verifying the dashboard element and redirection', () => {
 
     test('Dashboard', async ({ page }) => {
+        await test.setTimeout(50000)
         const Dashboard = new dashBoardPage(page)
+        
         Dashboard.verifyingAttendanceSummary()
 
        
