@@ -2,6 +2,7 @@ const { expect } = require("@playwright/test");
 
 exports.LoginPage = class LoginPage {
     constructor(page) {
+        //For BO 
         this.page = page
         this.EmployeeId = "//input[@name='employee_id']"
         this.EmployeeIdLogin = "//button[@type='submit']"
@@ -11,6 +12,11 @@ exports.LoginPage = class LoginPage {
         this.Logout = "//ul[@class='MuiList-root MuiList-padding']/li[text()='Logout']"
         this.Passwordnotmathched = this.page.locator("//*[@class='MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorError MuiTypography-alignCenter']");
         this.Usernamenotmatched = this.page.locator("//*[@class='MuiTypography-root MuiTypography-subtitle1 MuiTypography-colorError MuiTypography-alignCenter']");
+        //For Django
+        this.userName="//input[@name='username']"
+        this.passwordD="#id_password"
+        this.loginButton="//input[@value='Log in']"
+
     }
 
     async gotoLoginPage() {
@@ -43,4 +49,8 @@ exports.LoginPage = class LoginPage {
         await expect(this.Passwordnotmathched).toContainText("PASSWORD NOT MATCH. PLEASE RETRY")
 
     }
+    
+   
 }
+
+    

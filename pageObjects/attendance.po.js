@@ -10,13 +10,14 @@ exports.attendancePage = class attendancePage {
         this.attendanceReportByMonth="//span[contains(text(), 'Attendance report by month')]"
         this.monthFilter="//label[@for='selected_month']//following-sibling::div"
         this.yearFilter="//label[@for='selected_year']//following-sibling::div"
-        this.companyFilter="//label[@for='selected_company']//following-sibling::div"
+        this.companyFilter="//label[@for='company']//following-sibling::div"
         this.zoneFilter="//label[@for='zone']//following-sibling::div"
         this.regionFilter="//label[@for='region']//following-sibling::div"
         this.estateFilter="//label[@for='estate']//following-sibling::div"
         this.dropdownElement="//div[@class=' css-1m0ufzk']//div"
         this.greenExcel="(//img[@alt='excel_icon'])[1]"
         this.exportSuccessfully="//div[contains(text(), 'Successfully Exported')]"
+        
     }
 
     async verifyingAttendanceReportGeneration(){
@@ -87,6 +88,7 @@ exports.attendancePage = class attendancePage {
             }
 
         }
+        
 
     }
     async verifyingZoneFilter(){

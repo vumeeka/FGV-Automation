@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../../pageObjects/login.po';
 import loginjson from '../../fixtures/loginFixture.json'
+import backOfficeJson from '../../fixtures/backOfficeFixture.json'
+const playwright = require('playwright');
 import { TIMEOUT } from 'dns';
 test.describe('valid Login through UI', () => {
     test('login with the valid credential', async ({ page }) => {
@@ -29,4 +31,6 @@ test.describe('Invalid login through UI', () => {
         await login.verifyPasswordNotMatched()
 
     })
+
+    
 });

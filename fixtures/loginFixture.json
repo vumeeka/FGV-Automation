@@ -9,5 +9,16 @@
         "EmployeeDetails": "FGVADMINq",
         "passwordDetails": "ChangeM1"
 
+    },
+
+    "dJangoUserandPassword":{
+      "dJangoUser": "admin",
+      "dJangoPassword": "ChangeM6"
+
+    },
+    "passwordField":{
+      "singlePasswordConfirmation": "Bhumika01",
+      "doublePasswordConfirmation": "Bhumika01"
+
     }
 }
